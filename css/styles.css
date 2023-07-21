@@ -123,9 +123,12 @@ h1 {
 }
 
 .picture-desc {
-    background-color: #222;
+    background: rgba(0,0,0,.5);
     color: #fff;
     padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
 }
 
 .content-quote {
