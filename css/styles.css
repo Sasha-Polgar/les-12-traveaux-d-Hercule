@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;700&display=swap');
+
+
 body {
     background:#eee;
+    font-family: 'Asap', sans-serif;
 }
 
 * {
@@ -20,6 +24,8 @@ body {
     width: 250px;
     background: #f5f5f5;
     border-right: 1px solid rgba(0,0,0,.1);
+    min-height: 100%;
+    position: fixed;
 }
 
 .search {
@@ -51,8 +57,23 @@ body {
 }
 
 .nav-item {
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
 }
+
+.nav-item:hover {
+    background-color: #f39c12;
+    transition: 300ms;
+}
+
+.nav-item--accueil {
+    border-bottom: 2px solid #f39c12;
+}
+
 
 .page {
     padding: 5rem 2rem 2rem;
@@ -78,6 +99,14 @@ body {
     margin-left: auto;
 }
 
+h1 {
+    font-weight: 700;
+}
+
+.content-title--sub {
+    color: #aaa;
+}
+
 .content-picture {
     width: 50%;
     position: relative;
@@ -91,6 +120,12 @@ body {
 .picture {
     width: 100%;
     display: block;
+}
+
+.picture-desc {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
 }
 
 .content-quote {
@@ -122,11 +157,16 @@ body {
 }
 
 .articles-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     margin-top: 2rem;
 }
 
 .card {
     margin-bottom: 2rem;
+    width: 45%;
 }
 
 .card-title {
@@ -149,8 +189,19 @@ body {
 }
 
 .btn {
-    padding: 1rem 2rem;
+    border: 2px solid #f39c12;
+    border-radius: 50px;
+    color: #f39c12;
     font-size: 1.2em;
+    font-weight: 700;
+    margin: 5px;
+    padding: 1rem 2rem;
+}
+
+.btn:hover {
+    background-color: #f39c12;
+    color: white;
+    transition: 300ms;
 }
 
 .footer {
@@ -163,8 +214,8 @@ body {
 /*
     Styles pour les écrans de moins de 1200px de large :
 */
-/*
 
+@media (max-width:1200px) {
     .content-focus {
         display:block;
     }
@@ -190,13 +241,13 @@ body {
     .card {
         width:auto;
     }
+}
 
-*/
 
 /*
     Styles pour les écrans de moins de 900px de large :
 */
-/*
+@media (max-width:900px) {
     .header {
         position:static;
         width:auto;
@@ -223,15 +274,17 @@ body {
 
     .nav-links {
         margin-top:0;
+        display: flex;
     }
 
     .nav-item {
         width:calc(33.3333% - .5rem);
         text-align: center;
+        margin: 5px;
     }
 
     .nav-item-link {
         margin-bottom: 0;
     }
+}
 
-*/
